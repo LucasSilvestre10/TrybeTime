@@ -83,22 +83,25 @@ export class App extends Component {
     return (
       <body>
         <div>
-          <h1>CRONÔMETRO</h1>
+          <h1>Temporizador muito simples!</h1>
           <div>
             <p>
-              <h2>
+              <h1>
                 {setMinutes.toString().padStart(2, "0")}:
                 {setSeconds.toString().padStart(2, "0")}
-              </h2>
+              </h1>
             </p>
-            <input
-              htmlFor="input-time"
-              type="number"
-              placeholder="informe quantos minutos"
-              name="inputTime"
-              value={inputTime}
-              onChange={this.setNewState}
-            />
+            <div>
+              <p>Insira o tempo desejado em MINUTOS!</p>
+              <input
+                htmlFor="input-time"
+                type="number"
+                placeholder="informe quantos minutos"
+                name="inputTime"
+                value={inputTime}
+                onChange={this.setNewState}
+              />
+            </div>
             <div>
               <button onClick={this.startTimer}>INICIAR</button>
               <button onClick={this.stopTimer}>PARAR</button>
